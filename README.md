@@ -316,59 +316,6 @@ export default function ArtistCard({ artist, viewMode = 'grid' }) {
 }
 ```
 
----
-
-## 🚀 **Deployment**
-
-### **Vercel Deployment** (Recommended)
-
-1. **Connect Repository**
-```bash
-# Push to GitHub
-git add .
-git commit -m "Ready for deployment"
-git push origin main
-```
-
-2. **Deploy to Vercel**
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel --prod
-```
-
-3. **Automatic Deployments**
-- Connect GitHub repository to Vercel
-- Automatic deployments on push to main branch
-- Preview deployments for pull requests
-
-### **Environment Variables**
-```bash
-# .env.local (for local development)
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-NEXT_PUBLIC_API_URL=https://api.artistly.com
-```
-
-### **Build Optimization**
-```javascript
-// next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ['images.unsplash.com'],
-  },
-  experimental: {
-    optimizeCss: true,
-  },
-}
-
-module.exports = nextConfig
-```
-
----
-
 
 
 **Built with ❤️ by abhishek Hiwarkar"
