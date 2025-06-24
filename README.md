@@ -5,7 +5,7 @@
 
 ## 🌟 **Live Demo**
 
-🔗 **[View Live Demo]https://artistly-1amk.vercel.app/** _(Deploy to get this link)_
+🔗 [View Live Demo]https://artistly-1amk.vercel.app/
 
 ---
 
