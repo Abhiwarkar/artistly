@@ -1,0 +1,44 @@
+[
+  {
+    "id": "singers",
+    "name": "Singers",
+    "description": "Professional vocalists for all genres and events",
+    "icon": "Mic",
+    "totalArtists": 124
+  },
+  {
+    "id": "dancers",
+    "name": "Dancers", 
+    "description": "Choreographers and performers for various dance styles",
+    "icon": "Users",
+    "totalArtists": 98
+  },
+  {
+    "id": "speakers",
+    "name": "Speakers",
+    "description": "Motivational speakers and keynote presenters",
+    "icon": "MessageSquare",
+    "totalArtists": 67
+  },
+  {
+    "id": "djs",
+    "name": "DJs",
+    "description": "Music DJs and audio professionals",
+    "icon": "Music",
+    "totalArtists": 89
+  },
+  {
+    "id": "bands",
+    "name": "Bands",
+    "description": "Musical bands and orchestras", 
+    "icon": "Music4",
+    "totalArtists": 45
+  },
+  {
+    "id": "comedians",
+    "name": "Comedians",
+    "description": "Stand-up comedians and entertainers",
+    "icon": "Smile", 
+    "totalArtists": 34
+  }
+]

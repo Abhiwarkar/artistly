@@ -1,0 +1,219 @@
+
+[
+  {
+    "id": 1,
+    "name": "Priya Sharma",
+    "location": "Mumbai, Maharashtra",
+    "category": ["Singers"],
+    "rating": 4.8,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop&crop=center",
+    "bio": "Professional Bollywood singer with 8 years of experience. Specializes in classical and contemporary music.",
+    "feeRange": "₹25,000 - ₹50,000",
+    "experience": "8+ years",
+    "eventsCompleted": 156,
+    "socialMedia": {
+      "instagram": "https://instagram.com/priyasharma",
+      "youtube": "https://youtube.com/priyasharma",
+      "website": "https://priyasharma.com"
+    }
+  },
+  {
+  "id": 2,
+  "name": "DJ Arjun",
+  "location": "Delhi, India",
+  "category": ["DJs"],
+  "rating": 4.9,
+  "verified": true,
+  "available": true,
+  "profileImage": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop&crop=center",
+  "bio": "Top-rated wedding and party DJ with state-of-the-art equipment. Known for seamless mixing and reading crowds perfectly.",
+  "feeRange": "₹50,000 - ₹1,00,000",
+  "experience": "12+ years",
+  "eventsCompleted": 234,
+  "socialMedia": {
+    "instagram": "https://instagram.com/djarjun",
+    "youtube": "https://youtube.com/djarjun"
+  }
+},
+  {
+    "id": 3,
+    "name": "Kavya Dance Troupe",
+    "location": "Chennai, Tamil Nadu",
+    "category": ["Dancers"],
+    "rating": 4.7,
+    "verified": true,
+    "available": false,
+    "profileImage": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=300&fit=crop&crop=center",
+    "bio": "Award-winning contemporary and classical dance group. Specializes in fusion performances combining traditional and modern styles.",
+    "feeRange": "₹1,00,000 - ₹2,50,000",
+    "experience": "15+ years",
+    "eventsCompleted": 89,
+    "socialMedia": {
+      "instagram": "https://instagram.com/kavyadance",
+      "website": "https://kavyadance.com"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Rohit Motivational Speaker",
+    "location": "Pune, Maharashtra",
+    "category": ["Speakers"],
+    "rating": 4.6,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop&crop=center",
+    "bio": "Certified corporate trainer and motivational speaker. Specializes in leadership development, team building, and personal growth.",
+    "feeRange": "₹75,000 - ₹1,50,000",
+    "experience": "10+ years",
+    "eventsCompleted": 67,
+    "socialMedia": {
+      "website": "https://rohitspeaks.com"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Ravi Kathak Dancer",
+    "location": "Hyderabad, Telangana",
+    "category": ["Dancers"],
+    "rating": 4.8,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=400&h=300&fit=crop&crop=center",
+    "bio": "Master of Kathak classical dance with over 18 years of experience. Has performed at national and international venues.",
+    "feeRange": "₹60,000 - ₹1,20,000",
+    "experience": "18+ years",
+    "eventsCompleted": 94,
+    "socialMedia": {
+      "instagram": "https://instagram.com/ravikathak",
+      "website": "https://ravikathak.in"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Dr. Sneha Tech Speaker",
+    "location": "Bangalore, Karnataka",
+    "category": ["Speakers"],
+    "rating": 4.9,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1560439514-4e9645039924?w=400&h=300&fit=crop&crop=center",
+    "bio": "Technology evangelist and startup mentor. Expert in AI, blockchain, and digital transformation strategies.",
+    "feeRange": "₹1,00,000 - ₹2,00,000",
+    "experience": "15+ years",
+    "eventsCompleted": 45,
+    "socialMedia": {
+      "instagram": "https://instagram.com/drsnehatech",
+      "website": "https://snehatech.com"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Melody Makers Band",
+    "location": "Mumbai, Maharashtra",
+    "category": ["Bands"],
+    "rating": 4.7,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&crop=center",
+    "bio": "5-piece band specializing in Bollywood, rock, and fusion music. Perfect for weddings and corporate events.",
+    "feeRange": "₹1,50,000 - ₹3,00,000",
+    "experience": "8+ years",
+    "eventsCompleted": 76,
+    "socialMedia": {
+      "instagram": "https://instagram.com/melodymakers",
+      "youtube": "https://youtube.com/melodymakers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Comedy King Rajesh",
+    "location": "Delhi, India",
+    "category": ["Comedians"],
+    "rating": 4.5,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=center",
+    "bio": "Stand-up comedian with hilarious observational comedy. Has performed at comedy clubs across India.",
+    "feeRange": "₹40,000 - ₹80,000",
+    "experience": "6+ years",
+    "eventsCompleted": 123,
+    "socialMedia": {
+      "instagram": "https://instagram.com/comedykingrajesh",
+      "youtube": "https://youtube.com/comedykingrajesh"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Sitar Maestro Ravi",
+    "location": "Kolkata, West Bengal",
+    "category": ["Singers"],
+    "rating": 4.9,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop&crop=center",
+    "bio": "Classical Indian musician specializing in sitar and vocal performances. Trained in traditional ragas.",
+    "feeRange": "₹80,000 - ₹1,50,000",
+    "experience": "20+ years",
+    "eventsCompleted": 89,
+    "socialMedia": {
+      "website": "https://sitarmaestro.com"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Hip Hop Crew Mumbai",
+    "location": "Mumbai, Maharashtra",
+    "category": ["Dancers"],
+    "rating": 4.6,
+    "verified": true,
+    "available": true,
+    "profileImage": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=300&fit=crop&crop=center",
+    "bio": "Young and energetic hip-hop dance crew. Specializes in street dance, breakdancing, and choreography.",
+    "feeRange": "₹30,000 - ₹70,000",
+    "experience": "5+ years",
+    "eventsCompleted": 67,
+    "socialMedia": {
+      "instagram": "https://instagram.com/hiphopcrewmumbai",
+      "youtube": "https://youtube.com/hiphopcrewmumbai"
+    }
+  },
+  
+{
+  "id": 11,
+  "name": "Wedding Singer Pooja",
+  "location": "Ahmedabad, Gujarat",
+  "category": ["Singers"],
+  "rating": 4.7,
+  "verified": true,
+  "available": true,
+  "profileImage": "https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?w=400&h=300&fit=crop&crop=center",
+  "bio": "Specializes in wedding songs, folk music, and devotional singing. Perfect for traditional ceremonies.",
+  "feeRange": "₹35,000 - ₹75,000",
+  "experience": "12+ years",
+  "eventsCompleted": 156,
+  "socialMedia": {
+    "instagram": "https://instagram.com/weddingsingerpooja"
+  }
+},
+ {
+  "id": 12,
+  "name": "DJ Bass Drop",
+  "location": "Bangalore, Karnataka",
+  "category": ["DJs"],
+  "rating": 4.8,
+  "verified": true,
+  "available": true,
+  "profileImage": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=300&fit=crop&crop=center",
+  "bio": "Electronic music producer and DJ. Specializes in EDM, house, and techno music for nightclubs and festivals.",
+  "feeRange": "₹60,000 - ₹1,20,000",
+  "experience": "9+ years",
+  "eventsCompleted": 134,
+  "socialMedia": {
+    "instagram": "https://instagram.com/djbassdrop",
+    "youtube": "https://youtube.com/djbassdrop",
+    "website": "https://djbassdrop.com"
+  }
+}
+]

@@ -1,26 +1,648 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+ 
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+ 
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+ 
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+ 
+  .grid-responsive {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .grid-responsive {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Component fixes */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1200px;
+}
+
+/* Button component styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+}
+
+/* ===== BUTTON TEXT VISIBILITY FIX ===== */
+/* Force button text and links to be visible ALWAYS */
+button,
+.button,
+[role="button"],
+button span,
+.button span,
+[role="button"] span,
+button a,
+.button a,
+[role="button"] a {
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: inherit !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Force text to be visible in ALL states */
+button *,
+.button *,
+[role="button"] *,
+a[role="button"] *,
+[data-radix-collection-item] * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: inherit !important;
+}
+
+/* Remove mouse cursor from hero section */
+.hero-scroll-indicator {
+  display: none !important;
+}
+
+/* Featured artist cards equal height alignment */
+.featured-artist-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.featured-artist-content {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.featured-artist-button {
+  margin-top: auto !important;
+}
+
+/* Fix for Next.js Link components inside buttons */
+a[class*="flex"] {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Fix button content alignment */
+button[class*="flex"],
+.button[class*="flex"],
+[role="button"][class*="flex"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+}
+
+/* Specific fixes for white background buttons */
+.bg-white span,
+.bg-white a {
+  color: #1f2937 !important; /* gray-800 */
+}
+
+/* Specific fixes for white border buttons */
+.border-white span,
+.border-white a {
+  color: white !important;
+}
+
+/* Fix hover states */
+.hover\:bg-white:hover span,
+.hover\:bg-white:hover a {
+  color: #1f2937 !important;
+}
+
+.hover\:bg-primary:hover span,
+.hover\:bg-primary:hover a {
+  color: white !important;
+}
+
+/* Ensure icons don't shrink */
+svg {
+  flex-shrink: 0 !important;
+}
+
+/* Force text to stay visible on all button variants */
+button *,
+.button *,
+[role="button"] * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* No underline on button links */
+.no-underline {
+  text-decoration: none !important;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== COMPLETE RESPONSIVE DESIGN FOR ALL SCREENS ===== */
+
+/* ===== MOBILE FIRST: 320px - 479px (Extra Small Mobile) ===== */
+@media (max-width: 479px) {
+  .container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    max-width: 100% !important;
+  }
+
+  /* Typography mobile */
+  h1 { font-size: 1.5rem !important; line-height: 2rem !important; }
+  h2 { font-size: 1.25rem !important; line-height: 1.75rem !important; }
+  h3 { font-size: 1.125rem !important; line-height: 1.5rem !important; }
+  
+  /* All grids become single column */
+  [class*="grid-cols-"], [class*="lg:grid-cols-"], [class*="md:grid-cols-"], [class*="sm:grid-cols-"] {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Hero section mobile */
+  section[class*="min-h"] {
+    min-height: 50vh !important;
+    padding: 1.5rem 0 !important;
+  }
+
+  /* Buttons mobile */
+  button, .button {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.875rem !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Cards mobile */
+  [class*="Card"], .card {
+    margin: 0.5rem 0 !important;
+    padding: 0.75rem !important;
+  }
+
+  /* Forms mobile */
+  input, textarea, select {
+    padding: 0.75rem !important;
+    font-size: 1rem !important; /* Prevents iOS zoom */
+    width: 100% !important;
+  }
+
+  /* Tables become cards on mobile */
+  table {
+    display: none !important;
+  }
+
+  .table-mobile-card {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.5rem !important;
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+  }
+}
+
+/* ===== SMALL MOBILE: 480px - 639px ===== */
+@media (min-width: 480px) and (max-width: 639px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  h1 { font-size: 1.875rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.25rem !important; }
+
+  /* Two column grids for larger mobile */
+  [class*="grid-cols-4"], [class*="grid-cols-3"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  section[class*="min-h"] {
+    min-height: 60vh !important;
+  }
+}
+
+/* ===== TABLET PORTRAIT: 640px - 767px ===== */
+@media (min-width: 640px) and (max-width: 767px) {
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  h1 { font-size: 2.25rem !important; }
+  h2 { font-size: 1.875rem !important; }
+  h3 { font-size: 1.5rem !important; }
+
+  [class*="grid-cols-4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  section[class*="min-h"] {
+    min-height: 70vh !important;
+  }
+
+  /* Buttons can be side by side */
+  button, .button {
+    width: auto !important;
+    display: inline-flex !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+/* ===== TABLET LANDSCAPE: 768px - 1023px ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 100% !important;
+  }
+
+  h1 { font-size: 2.5rem !important; }
+  h2 { font-size: 2rem !important; }
+  h3 { font-size: 1.625rem !important; }
+
+  [class*="grid-cols-4"], [class*="grid-cols-6"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  section[class*="min-h"] {
+    min-height: 75vh !important;
+  }
+
+  /* Show tables but make them scroll horizontally */
+  table {
+    display: table !important;
+    min-width: 600px !important;
+    font-size: 0.875rem !important;
+  }
+
+  .table-container {
+    overflow-x: auto !important;
+  }
+}
+
+/* ===== SMALL DESKTOP: 1024px - 1279px ===== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    max-width: 1024px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  h1 { font-size: 3rem !important; }
+  h2 { font-size: 2.25rem !important; }
+  h3 { font-size: 1.875rem !important; }
+
+  [class*="grid-cols-6"] {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* ===== LARGE DESKTOP: 1280px+ ===== */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  h1 { font-size: 3.75rem !important; }
+  h2 { font-size: 3rem !important; }
+  h3 { font-size: 2.25rem !important; }
+}
+
+/* ===== COMPONENT SPECIFIC RESPONSIVE FIXES ===== */
+
+/* Header responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 0.75rem 0 !important;
+  }
+  
+  header .container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  header nav {
+    display: none !important;
+  }
+
+  header button[aria-label*="menu"] {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav {
+    display: flex !important;
+  }
+  
+  header button[aria-label*="menu"] {
+    display: none !important;
+  }
+}
+
+/* Hero section responsive */
+@media (max-width: 640px) {
+  section[style*="background-image"] {
+    min-height: 60vh !important;
+    padding: 2rem 1rem !important;
+  }
+  
+  section[style*="background-image"] h1 {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+  
+  section[style*="background-image"] p {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+}
+
+/* Dashboard table mobile - Convert to cards */
+@media (max-width: 768px) {
+  table, .table {
+    display: none !important;
+  }
+
+  /* Create mobile cards from table data */
+  .artist-table-mobile {
+    display: block !important;
+  }
+
+  .artist-card-mobile {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.75rem !important;
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  }
+
+  .artist-card-mobile h4 {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .artist-card-mobile p {
+    font-size: 0.875rem !important;
+    color: #6b7280 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .artist-card-mobile .actions {
+    display: flex !important;
+    gap: 0.5rem !important;
+    margin-top: 1rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .artist-card-mobile .actions button {
+    flex: 1 !important;
+    padding: 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Forms responsive */
+@media (max-width: 640px) {
+  form {
+    padding: 1rem !important;
+  }
+  
+  form [class*="grid-cols"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  form input, form textarea, form select {
+    margin-bottom: 1rem !important;
+    padding: 0.75rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Artist cards responsive */
+@media (max-width: 640px) {
+  [class*="artist-grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .artist-card img {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Category cards responsive */
+@media (max-width: 640px) {
+  .category-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Filters responsive */
+@media (max-width: 640px) {
+  .filters-section {
+    background: white !important;
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  }
+
+  .filter-checkboxes {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  label:has(input[type="checkbox"]) {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.5rem !important;
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.375rem !important;
+    cursor: pointer !important;
+  }
+
+  input[type="checkbox"] {
+    width: 1rem !important;
+    height: 1rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+/* Navigation responsive */
+@media (max-width: 768px) {
+  nav[class*="space-x"] {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  nav a {
+    padding: 0.75rem !important;
+    text-align: center !important;
+    display: block !important;
+  }
+}
+
+/* Spacing fixes */
+@media (max-width: 640px) {
+  [class*="space-y-8"] > * + * {
+    margin-top: 1rem !important;
+  }
+  
+  [class*="space-y-6"] > * + * {
+    margin-top: 0.75rem !important;
+  }
+  
+  [class*="p-8"] {
+    padding: 1rem !important;
+  }
+  
+  [class*="p-6"] {
+    padding: 0.75rem !important;
+  }
+  
+  [class*="py-8"] {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  [class*="px-8"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Force responsive behavior */
+@media (max-width: 640px) {
+  div, section, article {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  [class*="w-96"], [class*="w-80"], [class*="w-64"] {
+    width: 100% !important;
+  }
+  
+  [class*="max-w-"] {
+    max-width: 100% !important;
+  }
+  
+  * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
 }

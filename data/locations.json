@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra", 
+    "country": "India",
+    "displayName": "Mumbai, Maharashtra"
+  },
+  {
+    "id": "delhi",
+    "city": "Delhi",
+    "state": "Delhi",
+    "country": "India", 
+    "displayName": "Delhi, India"
+  },
+  {
+    "id": "bangalore",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "country": "India",
+    "displayName": "Bangalore, Karnataka"
+  },
+  {
+    "id": "hyderabad",
+    "city": "Hyderabad", 
+    "state": "Telangana",
+    "country": "India",
+    "displayName": "Hyderabad, Telangana"
+  },
+  {
+    "id": "chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "displayName": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "kolkata",
+    "city": "Kolkata",
+    "state": "West Bengal", 
+    "country": "India",
+    "displayName": "Kolkata, West Bengal"
+  },
+  {
+    "id": "pune",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "country": "India",
+    "displayName": "Pune, Maharashtra"
+  },
+  {
+    "id": "ahmedabad",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "country": "India", 
+    "displayName": "Ahmedabad, Gujarat"
+  },
+  {
+    "id": "jaipur",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "country": "India",
+    "displayName": "Jaipur, Rajasthan"
+  },
+  {
+    "id": "surat",
+    "city": "Surat",
+    "state": "Gujarat",
+    "country": "India",
+    "displayName": "Surat, Gujarat"
+  }
+]
