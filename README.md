@@ -1,34 +1,14 @@
 # 🎭 Artistly.com - Premier Artist Booking Platform
 
-[![Next.js](https://img.shields.io/badge/Next.js-14.2.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18.3.1-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![TypeScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 > A modern, responsive web application for connecting event planners with talented performers across India. Built with Next.js, React, and Tailwind CSS.
 
 ## 🌟 **Live Demo**
 
-🔗 **[View Live Demo](https://artistly-booking-platform.vercel.app)** _(Deploy to get this link)_
+🔗 **[View Live Demo]https://artistly-1amk.vercel.app/** _(Deploy to get this link)_
 
 ---
 
-## 📋 **Table of Contents**
-
-- [🎯 Project Overview](#-project-overview)
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📱 Pages & Functionality](#-pages--functionality)
-- [🚀 Quick Start](#-quick-start)
-- [📁 Project Structure](#-project-structure)
-- [🎨 UI Components](#-ui-components)
-- [📊 Data Management](#-data-management)
-- [🔧 Development](#-development)
-- [🚀 Deployment](#-deployment)
-- [📸 Screenshots](#-screenshots)
-- [🤝 Contributing](#-contributing)
-
----
 
 ## 🎯 **Project Overview**
 
@@ -157,7 +137,7 @@ Git
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/artistly-booking-platform.git
+git clone https://github.com/Abhiwarkar/artistly
 cd artistly-booking-platform
 ```
 
@@ -389,95 +369,6 @@ module.exports = nextConfig
 
 ---
 
-## 📸 **Screenshots**
 
-### 🏠 **Homepage**
-![Homepage](https://via.placeholder.com/800x400?text=Homepage+Screenshot)
-*Modern hero section with clear value proposition and category showcase*
 
-### 🔍 **Artist Listing**
-![Artist Listing](https://via.placeholder.com/800x400?text=Artist+Listing+Screenshot)
-*Advanced filtering with grid/list toggle and comprehensive artist cards*
-
-### 📝 **Onboarding Form**
-![Onboarding Form](https://via.placeholder.com/800x400?text=Onboarding+Form+Screenshot)
-*Multi-step form with validation and progress tracking*
-
-### 📊 **Dashboard**
-![Dashboard](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
-*Professional management interface with data table and analytics*
-
----
-
-## 🤝 **Contributing**
-
-### **Development Workflow**
-
-1. **Fork the repository**
-2. **Create feature branch**
-```bash
-git checkout -b feature/amazing-feature
-```
-
-3. **Make changes and commit**
-```bash
-git commit -m 'Add amazing feature'
-```
-
-4. **Push to branch**
-```bash
-git push origin feature/amazing-feature
-```
-
-5. **Open Pull Request**
-
-### **Code Style Guidelines**
-- Use functional components with hooks
-- Follow React best practices
-- Write meaningful commit messages
-- Add JSDoc comments for complex functions
-- Ensure responsive design for all components
-
----
-
-## 📄 **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👨‍💻 **Author**
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
-
----
-
-## 🙏 **Acknowledgments**
-
-- **[shadcn/ui](https://ui.shadcn.com/)** - For the excellent component library
-- **[Unsplash](https://unsplash.com/)** - For high-quality placeholder images
-- **[Lucide](https://lucide.dev/)** - For beautiful icons
-- **[Vercel](https://vercel.com/)** - For seamless deployment platform
-
----
-
-## 📈 **Project Stats**
-
-```
-📁 Total Files: 50+
-💻 Lines of Code: 5,000+
-🎨 Components: 25+
-📱 Pages: 4
-🔧 Features: 15+
-⚡ Performance Score: 95+
-♿ Accessibility Score: 98+
-```
-
----
-
-**Built with ❤️ for the Frontend Developer Test Assignment**
-
-*Last Updated: June 24, 2025*
+**Built with ❤️ by abhishek Hiwarkar"
